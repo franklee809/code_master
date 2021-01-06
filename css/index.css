@@ -1,0 +1,13 @@
+p.special::before {
+    display: block;
+    content: 'pseudo! ';
+}
+
+p.special::after {
+    display: block;
+    content: counter(chapno, upper-roman) '. ';
+}
+
+p {
+    font-size: 5rem;
+}
