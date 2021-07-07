@@ -6,6 +6,8 @@ const user = {
     age: 12
 }
 
+console.log(Object.getOwnPropertyNames(user))
+
 const handler = {
     get(target, property) {
         console.log(`Property ${property} has been read.`);
