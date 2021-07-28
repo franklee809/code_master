@@ -1,0 +1,7 @@
+:root {
+    --dev-background-color:red;
+}
+
+.one {
+    background-color: var(--dev-background-color);
+}
