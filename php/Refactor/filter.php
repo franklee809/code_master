@@ -5,18 +5,18 @@ $items = [
     ['product_name' => 'Nike', 'price' => '122.00', 'quantity' => 200]
 ];
 
-function reject($items, $func)
+function filter($items, $func)
 {
     $result = [];
     foreach ($items as $item) {
-        if (!$func($item)) {
+        if ($func($item)) {
             $result[]= $item;
         }
     }
     return $result;
 }
 
-$result = reject($items, function ($item) {
+$result = filter($items, function ($item) {
     return (int)$item['price'] > 100;
 });
 
