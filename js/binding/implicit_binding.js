@@ -11,6 +11,17 @@ let user = {
 
 // user.getName();
 
+let user2 = {
+    name: 'Tapas',
+    address: 'freecodecamp',
+    getName: () => {
+        console.log(this);
+    }
+};
+
+user2.getName();
+
+process.exit()
 
 /**
  * ? Example 2 - Implicit Binding
