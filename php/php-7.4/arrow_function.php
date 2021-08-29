@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php';
+require 'php/vendor/autoload.php';
 
 
 $series =  collect([new Series('php series'), new Series('php series 2')]);

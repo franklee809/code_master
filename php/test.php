@@ -1,5 +1,5 @@
-<?php 
-require 'vendor/autoload.php';
+<?php
+require 'php/vendor/autoload.php';
 use Carbon\Carbon;
 // function isValidCoordinates($coordinates) {
 //     if(preg_match("/-\s|[a-zA-Z]/",$coordinates) == true){return false;}
