@@ -1,11 +1,11 @@
-<?php 
+<?php
     $a = '123';
     define('asd1',$a);
-    class aA{  
+    class aA{
         private $asd = '123';
         public function a(){
             $this->b();
-            echo $this->asd;
+            echo $this->asd. PHP_EOL;
         }
 
         public static function b(){
@@ -14,8 +14,8 @@
         }
 
     }
-    echo asd1;
-    // $test = new aA();
-    // echo $test->a();
+    // echo asd1;
+    $test = new aA();
+    echo $test->a();
 
 ?>
