@@ -1,0 +1,8 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+$theme-bg: #f8f9fa;
+
+body {
+    background-color: $theme-bg;
+    padding: 1.5rem;
+}
