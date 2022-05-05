@@ -1,4 +1,13 @@
 {
     "standard.enable": false,
-    "compile-hero.disable-compile-files-on-did-save-code": false
+    "compile-hero.disable-compile-files-on-did-save-code": false,
+    "files.associations": {
+        "*.ts": "typescript",
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
+        "string": "c",
+        "filesystem": "c",
+        "iosfwd": "c"
+    }
 }
