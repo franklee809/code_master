@@ -1,0 +1,35 @@
+{
+    "extends": [
+        "airbnb-base"
+    ],
+    "env": {
+        "node": true,
+        "es6": true,
+        "browser": true
+    },
+    "rules": {
+        "no-console": 0,
+        "indent": [
+            "error",
+            4,
+        ],
+        "no-var": 1,
+        "quotes": [
+            "error",
+            "single",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true,
+            },
+        ],
+        "template-curly-spacing": [
+            "error",
+            "never",
+        ],
+        "comma-dangle": [
+            "error",
+            "always-multiline",
+        ],
+        "no-implicit-globals": "error",
+    },
+}
