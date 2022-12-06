@@ -9,5 +9,6 @@
         "string": "c",
         "filesystem": "c",
         "iosfwd": "c"
-    }
+    },
+    "intelephense.environment.phpVersion": "8.1.0"
 }

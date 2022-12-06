@@ -4,5 +4,7 @@
 			"path": "../.."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"intelephense.environment.phpVersion": "8.1",
+	}
 }
