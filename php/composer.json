@@ -1,8 +1,8 @@
 {
     "require": {
         "nesbot/carbon": "^2.33",
-        "illuminate/support": "^8.21",
-        "tightenco/collect": "^8.34",
+        "illuminate/support": "^9.49.0",
+        "tightenco/collect": "^9.47.0",
         "larapack/dd": "^1.1"
     },
     "autoload" :{
