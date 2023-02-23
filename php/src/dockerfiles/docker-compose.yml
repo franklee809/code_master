@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: app-svc
+    restart: always
+    working_dir: /var/www/html
+    volumes:
+      - ../:/var/www/html
+      - ./composer.json:/var/www/html/composer.json
+      - ../../vendor:/var/www/html/vendor/
+
+  nginx:
+    image: nginx:1.23.3-alpine
+    container_name: nginx-svc
+    restart: always
+    ports:
+      - "8000:80"
+    volumes:
+      - ../:/var/www/html
+      - ./nginx:/etc/nginx/conf.d
