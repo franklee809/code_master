@@ -5,10 +5,9 @@
 
 class Transaction
 {
-    private float $amount;
-    private string $description;
+    private ?Customer $customer = null;
 
-    public function __construct(float $amount, string $description) {
+    public function __construct(private float $amount, private string $description) {
         $this->amount = $amount;
         $this->description = $description;
     }
@@ -30,6 +29,11 @@ class Transaction
     public function getAmount(): float
     {
         return $this->amount;
+    }
+
+    public function getCustomer(): ?Customer
+    {
+        return $this->customer;
     }
 
     public function __destruct()

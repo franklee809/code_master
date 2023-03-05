@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 require 'php/vendor/autoload.php';
 
-$class = 'Transaction';
-
-$transaction = new $class(10, 'this is a testing transaction');
+$transaction = new Transaction(10, 'this is a testing transaction');
 
 $transaction->addTax(8)->applyDiscount(10);
 
-dd($transaction);
+// $transaction->customer = new Customer();`
+
+dd($transaction->getCustomer()->paymentProfile->id ?? 'no');
 dd(phpinfo());
 // $root = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR;
 
