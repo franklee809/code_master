@@ -1,0 +1,18 @@
+version: '3'
+services:
+  yacht:
+    container_name: yacht
+    restart: unless-stopped
+    ports:
+      - 8001:8000
+    volumes:
+      - yacht:/config
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /Users/franklee/Development/Docker/compose:/compose
+    environment:
+      - PUID=0
+      - PGID=0
+      - COMPOSE_DIR=/composedo
+    image: selfhostedpro/yacht
+volumes:
+  yacht:
