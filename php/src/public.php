@@ -2,16 +2,18 @@
 
 declare(strict_types=1);
 
-require 'php/vendor/autoload.php';
+// require 'php/vendor/autoload.php';
+require_once './PaymentGateway/Stripe/Transaction.php';
+require_once './PaymentGateway/Paddle/Transaction.php';
+require_once './PaymentGateway/Paddle/CustomerProfile.php';
 
-$transaction = new Transaction(10, 'this is a testing transaction');
+use PaymentGateway\Paddle\Transaction;
 
-$transaction->addTax(8)->applyDiscount(10);
+$transactionStripe = new Transaction();
+// $transactionPaddle = new PaymentGateway\Paddle\Transaction();
 
-// $transaction->customer = new Customer();`
-
-dd($transaction->getCustomer()->paymentProfile->id ?? 'no');
-dd(phpinfo());
+var_dump($transactionStripe);
+// var_dump($transactionPaddle);
 // $root = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR;
 
 // define('APP_PATH', $root . 'app' . DIRECTORY_SEPARATOR);
