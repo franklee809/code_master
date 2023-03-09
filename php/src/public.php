@@ -7,12 +7,15 @@ require_once './PaymentGateway/Stripe/Transaction.php';
 require_once './PaymentGateway/Paddle/Transaction.php';
 require_once './PaymentGateway/Paddle/CustomerProfile.php';
 
-use PaymentGateway\Paddle\Transaction;
+use PaymentGateway\Paddle\Transaction as PaddleTransaction;
+use PaymentGateway\Stripe\Transaction;
 
 $transactionStripe = new Transaction();
+$transactionPaddle = new PaddleTransaction();
 // $transactionPaddle = new PaymentGateway\Paddle\Transaction();
 
 var_dump($transactionStripe);
+var_dump($transactionPaddle);
 // var_dump($transactionPaddle);
 // $root = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR;
 
