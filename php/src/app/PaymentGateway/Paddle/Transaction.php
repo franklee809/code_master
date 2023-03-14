@@ -4,22 +4,26 @@ declare(strict_types = 1);
 
 namespace App\PaymentGateway\Paddle;
 
-use DateTime;
+use App\Enums\Status;
 
 const FOO = 1;
 
 class Transaction
 {
+    private string $status;
+
     public function __construct()
     {
-        // var_dump(explode(',', 'hello, world'));
-        // var_dump(\explode(',', 'hello, world'));
-        // var_dump(new DateTime());
-        // var_dump(new CustomerProfile);
+        $this->setStatus(Status::PENDING);
     }
-}
 
-function explode()
-{
-    return 1;
+    public function setStatus(string $status): self
+    {
+        if (!isset(Status::ALL_STATUSES[$status])) {
+            throw new \Exception('wrong status code');
+        }
+        $this->status  = $status;
+
+        return $this;
+    }
 }
