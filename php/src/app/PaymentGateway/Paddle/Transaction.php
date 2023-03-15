@@ -12,8 +12,13 @@ class Transaction
 {
     private string $status;
 
+    private static int $count = 0;
+
+    public int $amount = 0;
+
     public function __construct()
     {
+        self::$count++;
         $this->setStatus(Status::PENDING);
     }
 
@@ -25,5 +30,20 @@ class Transaction
         $this->status  = $status;
 
         return $this;
+    }
+
+    public static function getCount()
+    {
+        return self::$count;
+    }
+
+    public function process()
+    {
+        $result = array_map(static function($value){ // TODO: use static callback or closure to remove the $this instance
+            return $value . '123';
+            }, [1,2,3]);
+            dump($result);
+
+        return 'Processing order transaction';
     }
 }
