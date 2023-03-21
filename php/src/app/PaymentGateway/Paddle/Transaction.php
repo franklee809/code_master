@@ -11,14 +11,13 @@ const FOO = 1;
 class Transaction
 {
     private string $status;
-
     private static int $count = 0;
+    private float $amount      = 0;
 
-    public int $amount = 0;
-
-    public function __construct()
+    public function __construct(float $amount)
     {
         self::$count++;
+        $this->amount  = $amount;
         $this->setStatus(Status::PENDING);
     }
 
@@ -39,10 +38,10 @@ class Transaction
 
     public function process()
     {
-        $result = array_map(static function($value){ // TODO: use static callback or closure to remove the $this instance
+        $result = array_map(static function ($value) { // TODO: use static callback or closure to remove the $this instance
             return $value . '123';
-            }, [1,2,3]);
-            dump($result);
+        }, [1, 2, 3]);
+        dump($result);
 
         return 'Processing order transaction';
     }

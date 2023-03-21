@@ -10,9 +10,15 @@ use App\PaymentGateway\Stripe\Transaction;
 use App\PaymentGateway\Paddle\Transaction as PaddleTransaction;
 
 $transactionStripe = new Transaction();
-$transactionPaddle = new PaddleTransaction();
+$transactionPaddle = new PaddleTransaction(14);
 
-dd($transactionPaddle->process());
+$reflectionProperty = new \ReflectionProperty(PaddleTransaction::enca class, 'amount');
+$reflectionProperty->setAccessible(true);
+
+$reflectionProperty->setValue($transactionPaddle, 12);
+
+dd($reflectionProperty->getValue($transactionPaddle));
+dd($transactionPaddle->amount);
 
 
 // $transactionPaddle->setStatus(Status::PAID);
