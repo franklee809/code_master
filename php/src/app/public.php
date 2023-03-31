@@ -2,15 +2,16 @@
 
 declare(strict_types = 1);
 
-use App\ToasterPro;
+use App\Element\{Boolean, Checkbox, Field, Radio, Text};
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-$toaster = new ToasterPro();
+$fields        = [
+    new Text('baseField'),
+    new Checkbox('baseField'),
+    new Radio('baseField'),
+];
 
-$toaster->addSlice('bread');
-$toaster->addSlice('bread');
-$toaster->addSlice('bread');
-$toaster->addSlice('bread');
-$toaster->addSlice('bread');
-$toaster->toast();
+foreach($fields as $field) {
+    dump($field->render());
+}
