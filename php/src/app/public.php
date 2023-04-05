@@ -2,12 +2,9 @@
 
 declare(strict_types = 1);
 
-use App\CollectionAgency;
-use App\RockyCollection;
-use App\Service\DebtCollectionService;
+use App\Invoice;
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-$class = new DebtCollectionService;
-
-$class->collectDebt(new RockyCollection);
+$invoice = new Invoice();
+var_dump($invoice);
