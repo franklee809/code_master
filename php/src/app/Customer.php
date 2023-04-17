@@ -1,5 +1,9 @@
 <?php
 
+namespace App;
+
 class Customer {
-    public ?PaymentProfile $paymentProfile = null;
+
+    public function __construct(public string $name) {
+    }
 }

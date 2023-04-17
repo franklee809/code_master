@@ -2,13 +2,17 @@
 
 declare(strict_types = 1);
 
-use App\ClassA;
-use App\ClassB;
+use App\Customer;
+use App\Invoice;
+use App\CustomInvoice;
 
 require __DIR__ . '/../../vendor/autoload.php';
 
-$classA        = ClassA::make();
-$classB        = ClassB::make();
+$invoiceA      = new Invoice(new Customer('mike'), 10.0, 12);
+$invoiceB      = new Invoice(new Customer('john'), 10.0, 12);
+$invoiceC      = $invoiceA;
 
-dump($classA);
-dd($classB);
+// $invoiceC->amount = 2000;
+dump($invoiceA, $invoiceB);
+dump($invoiceA == $invoiceB);
+dd($invoiceA === $invoiceB);
