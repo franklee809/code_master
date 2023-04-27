@@ -2,9 +2,9 @@
 
 declare(strict_types = 1);
 
-use App\Invoice;
+use App\Serialize\Invoice;
 
-require __DIR__ . '/../../vendor/autoload.php';
+require __DIR__ . '/../../../vendor/autoload.php';
 
 // dump(serialize(true));
 // dump(serialize(1));
