@@ -10,7 +10,7 @@ services:
     volumes:
       - ../:/var/www/html
       - ./composer.json:/var/www/html/composer.json
-      - ../../vendor:/var/www/html/vendor/
+      - ../../../vendor:/var/www/html/vendor/
 
   nginx:
     image: nginx:1.23.3-alpine

@@ -8,8 +8,7 @@ RUN set -ex \
 COPY . /var/www/html
 
 RUN composer dump-autoload --no-dev --optimize --classmap-authoritative
-
-# Set container's working dir
+# Set container's working dir #
 
 FROM php:8.1.16-fpm
 
