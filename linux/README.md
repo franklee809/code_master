@@ -1,5 +1,5 @@
 ###single awk with echo
-echo "Just get this word: Hello" | awk '{print $3}
+echo "Just get this word: Hello" | awk '{print $3}'
 
 
 ### use awk in a csv file with comma separator

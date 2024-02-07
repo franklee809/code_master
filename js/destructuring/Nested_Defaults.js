@@ -34,7 +34,8 @@ const {
         remove = defaults.options.remove,
         enable = defaults.options.enable,
         instance = defaults.options.instance,
-    } = {}, log: {
+    } = {},
+    log: {
         warn = defaults.log.warn,
         error = defaults.log.error,
     } = {},
