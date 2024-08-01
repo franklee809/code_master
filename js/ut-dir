@@ -1,0 +1,5 @@
+const a = [1, 2, 3];
+console.log(a.sorted());
+console.log(a.toReversed());
+console.log(a.toSpliced());
+console.log(a.with());

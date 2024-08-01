@@ -2,19 +2,16 @@
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
+    border: 2px solid #ff3307;
 }
 
 .container {
     background-color: #cacaca;
-    padding: 10px;
     margin: 50px;
     display: flex;
-    height: 500px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content:flex-start;
+    /* flex-wrap: wrap; */
+    height: 800px;
+    align-items: baseline;
 }
 
 .item {
@@ -22,26 +19,38 @@
     color: #ffffff;
     font-size: 35px;
     padding: 20px;
-    margin: 10px;
 }
 
 .items-1 {
-    order: 3;
+    /* order: 3; */
+    background-color: lime;
+    align-self: self-start;
 }
 
 .items-2 {
-    order: 4;
+    /* order: 4; */
+    background-color:indianred;
+    align-self: self-end;
+
 }
 
 .items-3 {
-    order: 0;
+    /* order: 0; */
+    background-color:green;
+    align-self: center;
+
 }
 
 .items-4 {
-    order: 1;
+    /* order: 1; */
+    background-color: coral;
+    align-self: stretch;
+
 }
 
 .items-5 {
-    order: 2;
-    flex: 1;
+    /* order: 2;
+    flex: 1; */
+    background-color:darkgoldenrod;
+    align-self: safe;
 }

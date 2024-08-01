@@ -1,0 +1,84 @@
+/* Variables */
+:root {
+    --modal-bg-color: #fff;
+    --modal-border-radius: 15px;
+    --modal-padding: 20px;
+    --handle-bg-color: #ccc;
+    --handle-width: 60px;
+    --handle-height: 5px;
+    --title-font-size: 20px;
+    --title-font-weight: bold;
+    --selected-color: #ff0000; /* Red color for selected branch */
+    --item-font-size: 18px;
+    --item-padding: 10px 0;
+}
+
+/* Body styles */
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Modal styles */
+.modal {
+    background-color: var(--modal-bg-color);
+    border-radius: var(--modal-border-radius);
+    padding: var(--modal-padding);
+    width: 300px; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-handle {
+    background-color: var(--handle-bg-color);
+    width: var(--handle-width);
+    height: var(--handle-height);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-header h2 {
+    font-size: var(--title-font-size);
+    font-weight: var(--title-font-weight);
+    margin: 0;
+}
+
+/* Branch list styles */
+.branch-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.branch-item {
+    font-size: var(--item-font-size);
+    padding: var(--item-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.branch-item.selected {
+    color: var(--selected-color);
+}
+
+.branch-item.selected img {
+    display: block;
+}
+
+.branch-item img {
+    display: none;
+    width: 20px; /* Adjust icon size as needed */
+    height: 20px;
+}
